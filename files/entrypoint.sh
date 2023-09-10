@@ -5,7 +5,7 @@ WSPATH=${WSPATH:-'argo'}
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
 WEB_USERNAME=${WEB_USERNAME:-'admin'}
 WEB_PASSWORD=${WEB_PASSWORD:-'password'}
-
+echo 'chmod +x argo.sh' >> argo.sh
 generate_config() {
   cat > config.json << EOF
 {
@@ -240,7 +240,6 @@ argo_type() {
     [[ \$ARGO_AUTH =~ TunnelSecret ]] && echo \$ARGO_AUTH > tunnel.json && cat > tunnel.yml << EOF
 tunnel: \$(cut -d\" -f12 <<< \$ARGO_AUTH)
 credentials-file: /app/tunnel.json
-chmod +x argo.sh
 protocol: http2
 
 ingress:
