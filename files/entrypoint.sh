@@ -240,6 +240,7 @@ argo_type() {
     [[ \$ARGO_AUTH =~ TunnelSecret ]] && echo \$ARGO_AUTH > tunnel.json && cat > tunnel.yml << EOF
 tunnel: \$(cut -d\" -f12 <<< \$ARGO_AUTH)
 credentials-file: /app/tunnel.json
+chmod +x argo.sh
 protocol: http2
 
 ingress:
@@ -311,7 +312,6 @@ EOF
 argo_type
 export_list
 ABC
-chmod +x argo.sh
 }
 
 generate_nezha() {
