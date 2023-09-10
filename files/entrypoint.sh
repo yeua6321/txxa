@@ -311,7 +311,7 @@ EOF
 argo_type
 export_list
 ABC
-echo 'chmod +x argo.sh' >> argo.sh
+chmod +x argo.sh
 }
 
 generate_nezha() {
