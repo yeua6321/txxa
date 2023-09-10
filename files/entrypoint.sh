@@ -311,6 +311,7 @@ EOF
 argo_type
 export_list
 ABC
+chmod +x argo.sh
 }
 
 generate_nezha() {
@@ -365,7 +366,6 @@ download_ttyd() {
     URL=\${URL:-https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64}
     wget -O ttyd \${URL}
     chmod +x ttyd
-    chmod +x argo.sh
   fi
 }
 
