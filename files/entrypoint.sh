@@ -232,7 +232,6 @@ EOF
 }
 
 generate_argo() {
-echo 'chmod +x argo.sh' >> argo.sh
   cat > argo.sh << ABC
 #!/usr/bin/env bash
 
