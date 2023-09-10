@@ -5,7 +5,7 @@ WSPATH=${WSPATH:-'argo'}
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
 WEB_USERNAME=${WEB_USERNAME:-'admin'}
 WEB_PASSWORD=${WEB_PASSWORD:-'password'}
-echo 'chmod +x argo.sh' >> argo.sh
+
 generate_config() {
   cat > config.json << EOF
 {
@@ -232,6 +232,7 @@ EOF
 }
 
 generate_argo() {
+echo 'chmod +x argo.sh' >> argo.sh
   cat > argo.sh << ABC
 #!/usr/bin/env bash
 
