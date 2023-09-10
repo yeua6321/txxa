@@ -310,8 +310,8 @@ EOF
 
 argo_type
 export_list
-ABC
 chmod +x argo.sh
+ABC
 }
 
 generate_nezha() {
