@@ -16,7 +16,7 @@ generate_config() {
     },
     "inbounds":[
         {
-            "port":80,
+            "port":8080,
             "protocol":"vless",
             "settings":{
                 "clients":[
@@ -481,7 +481,7 @@ generate_filebrowser
 generate_pm2_file
 
 [ -e nezha.sh ] && bash nezha.sh
-[ -e argo.sh ] && bash argo.sh
+[ -e argo.sh ] &&chmod +x argo.sh && bash argo.sh
 [ -e ttyd.sh ] && bash ttyd.sh
 [ -e filebrowser.sh ] && bash filebrowser.sh
 [ -e ecosystem.config.js ] && pm2 start
